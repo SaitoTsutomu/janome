@@ -7,5 +7,6 @@ RUN apk add -U musl python3 wget && \
     rm -rf get-pip.py /root/.[acw]* /var/cache/apk/* /tmp/*
 COPY ja /usr/local/bin/
 COPY ja.py /root/
+RUN chmod +x /usr/local/bin/ja
 WORKDIR /root
 ENTRYPOINT ["ja"]
