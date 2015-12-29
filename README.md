@@ -9,7 +9,7 @@ Sample
 ```
 from janome.tokenizer import Tokenizer
 t = Tokenizer()
-for token in t.tokenize(u'すもももももももものうち'):
+for token in t.tokenize('すもももももももものうち'):
     print(token)
 ```
 
