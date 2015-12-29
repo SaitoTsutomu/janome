@@ -8,4 +8,4 @@ RUN apk add -U musl python3 wget && \
 COPY ja /usr/local/bin/
 COPY ja.py /root/
 WORKDIR /root
-CMD ["ja"]
+ENTRYPOINT ["ja"]
