@@ -1,15 +1,18 @@
-﻿Python3.4 and janome on alpine. (167MB)
+﻿Python3.5 and janome on alpine. (191MB)
 ========
+Janome: Japanese morphological analysis engine.
 
 See https://pypi.python.org/pypi/Janome
 
 Sample
 
+```
 from janome.tokenizer import Tokenizer
 t = Tokenizer()
 for token in t.tokenize(u'すもももももももものうち'):
     print(token)
->>>
+```
+
 すもも 名詞,一般,*,*,*,*,すもも,スモモ,スモモ
 も    助詞,係助詞,*,*,*,*,も,モ,モ
 もも  名詞,一般,*,*,*,*,もも,モモ,モモ
