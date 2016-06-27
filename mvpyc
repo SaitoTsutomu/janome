@@ -6,3 +6,4 @@ do
   rm $f.py
   mv __pycache__/$f.cpython-35.pyc $f.pyc
 done
+exit 0
