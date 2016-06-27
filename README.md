@@ -1,4 +1,4 @@
-﻿Python3.5 and janome on alpine. (191MB)
+﻿Python3.5 and janome on alpine.
 ========
 Janome: Japanese morphological analysis engine.
 

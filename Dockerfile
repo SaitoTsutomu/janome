@@ -1,12 +1,9 @@
-FROM alpine
+FROM frolvlad/alpine-python3
 
-RUN apk add -U musl python3 wget && \
-    wget -q --no-check-certificate https://bootstrap.pypa.io/get-pip.py && \
-    python3 get-pip.py && \
-    pip install janome && \
-    rm -rf get-pip.py /root/.[acw]* /var/cache/apk/* /tmp/*
-COPY ja /usr/local/bin/
-COPY ja.py /root/
-RUN chmod +x /usr/local/bin/ja
-WORKDIR /root
-ENTRYPOINT ["ja"]
+RUN pip install janome && \
+    find /usr/lib/python3.5 -name __pycache__ | xargs rm -r && \
+    rm -rf /root/.c*
+ADD ja.tgz /root/
+ENTRYPOINT ["python3", "/root/ja.py"]
+
+
